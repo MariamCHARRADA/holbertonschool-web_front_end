@@ -1,10 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
-body {
-    color: var(--text-color);
-}
-a {
+body, a {
     color: var(--text-color);
 }
 .visually-hidden {
