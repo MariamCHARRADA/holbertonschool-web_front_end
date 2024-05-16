@@ -190,6 +190,29 @@
     white-space: nowrap;
   }
   
+  .off-screen {
+    position: absolute;
+    left: -100vw;
+  }
+  .skip-link {
+    background: var(--color-black);
+    color: var(--color-white);
+    left: 0;
+    top: 0;
+    padding: .7rem;
+    position: fixed;
+    opacity: 0;
+    font-weight: bold;
+    z-index: 10;
+    transform: translateY(-1rem);
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+  }
+  
+  .skip-link:focus {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
   /*** 2. LAYOUT ***/
   
   /* Layout
