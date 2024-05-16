@@ -443,6 +443,12 @@ html {
       display: none;
       flex: 1;
     }
+    .header .nav {
+      flex-direction: colum;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out
+    }
   }
   
   /* Header
@@ -460,12 +466,7 @@ html {
     justify-content: space-between;
     align-items: center;
   }
-  .header .nav {
-    flex-direction: colum;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease-out
-  }
+
   .header .menu-icon {
     cursor: pointer;
     padding: 2.5rem;
