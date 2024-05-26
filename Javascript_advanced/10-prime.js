@@ -24,7 +24,7 @@ for (i = 0; i < 100; i++) {
 t2 = performance.now();
 
 console.log(
-  "Execution time of printing countPrimeNumbers 100 timeswas " +
+  "Execution time of printing countPrimeNumbers 100 times was " +
     (t2 - t1) +
     " milliseconds."
 );
