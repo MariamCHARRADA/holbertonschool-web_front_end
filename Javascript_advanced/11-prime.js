@@ -15,18 +15,18 @@ function countPrimeNumbers() {
   return count;
 }
 
-t1 = performance.now();
-
 setTimeout(() => {
+  const t1 = performance.now();
+
   for (let i = 0; i < 100; i++) {
     countPrimeNumbers();
   }
+
+  const t2 = performance.now();
+
+  console.log(
+    "Execution time of printing countPrimeNumbers 100 times was " +
+      (t2 - t1) +
+      " milliseconds."
+  );
 }, 0);
-
-t2 = performance.now();
-
-console.log(
-  "Execution time of printing countPrimeNumbers 100 times was " +
-    (t2 - t1) +
-    " milliseconds."
-);
