@@ -33,7 +33,18 @@
                 )
             );
         }
+
+        function replaceFamilyTree() {
+            const newT = $("<table>").append(
+                $("<tr>").append(
+                    $("<td>").text("Gerard"),
+                    $("<td>").text("Bonissa")
+                ));
+
+            $("table tbody").html(newT.html());
+        }
         createFamilyTree();
+        replaceFamilyTree();
 
     </script>
 </body>
