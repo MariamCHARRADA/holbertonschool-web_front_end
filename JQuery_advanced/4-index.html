@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Task 2</title>
+    <title>Task 4</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 </head>
@@ -15,27 +15,31 @@
             $("body").append(
                 $("<table>").append(
                     $("<thead>").append(
-                        $("<th>").text("Firstname"),
-                        $("<th>").text("Lastname")
-                    ),
+                        $("<tr>").append(
+                            $("<th>").text("Firstname"),
+                            $("<th>").text("Lastname")
+                        )),
                     $("<tbody>").append(
-                        $("<td>").text("Guillaume"),
-                        $("<td>").text("Salva")
-                    ),
-                    $("<tr>").append(
-                        $("<td>").text("Paulette"),
-                        $("<td>").text("Salva")
-                    ),
-                    $("<tr>").append(
-                        $("<td>").text("Antoine"),
-                        $("<td>").text("Salva")
+                        $("<tr>").append(
+                            $("<td>").text("Guillaume"),
+                            $("<td>").text("Salva")
+                        ),
+                        $("<tr>").append(
+                            $("<td>").text("Paulette"),
+                            $("<td>").text("Salva")
+                        ),
+                        $("<tr>").append(
+                            $("<td>").text("Antoine"),
+                            $("<td>").text("Salva")
+                        )
                     )
                 )
+
             );
         }
 
         function replaceFamilyTree() {
-            const newT = $("<table>").append(
+            const newT = $("<tbody>").append(
                 $("<tr>").append(
                     $("<td>").text("Gerard"),
                     $("<td>").text("Bonissa")
