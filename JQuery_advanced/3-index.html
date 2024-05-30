@@ -15,22 +15,26 @@
             $("body").append(
                 $("<table>").append(
                     $("<thead>").append(
-                        $("<th>").text("Firstname"),
-                        $("<th>").text("Lastname")
-                    ),
+                        $("<tr>").append(
+                            $("<th>").text("Firstname"),
+                            $("<th>").text("Lastname")
+                        )),
                     $("<tbody>").append(
-                        $("<td>").text("Guillaume"),
-                        $("<td>").text("Salva")
-                    ),
-                    $("<tr>").append(
-                        $("<td>").text("Paulette"),
-                        $("<td>").text("Salva")
-                    ),
-                    $("<tr>").append(
-                        $("<td>").text("Antoine"),
-                        $("<td>").text("Salva")
+                        $("<tr>").append(
+                            $("<td>").text("Guillaume"),
+                            $("<td>").text("Salva")
+                        ),
+                        $("<tr>").append(
+                            $("<td>").text("Paulette"),
+                            $("<td>").text("Salva")
+                        ),
+                        $("<tr>").append(
+                            $("<td>").text("Antoine"),
+                            $("<td>").text("Salva")
+                        )
                     )
                 )
+
             );
         }
         createFamilyTree();
