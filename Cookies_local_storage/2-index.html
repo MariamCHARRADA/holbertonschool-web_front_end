@@ -15,7 +15,6 @@
                 
                 document.cookie = `firstname=${firstName}; ${expiry}; path=/`;
                 document.cookie = `email=${email}; ${expiry}; path=/`;
-                document.cookie
             }
             function showCookies() {
                 const email = getCookie('email');
@@ -33,7 +32,7 @@
                     const cookie = cookies[i].trim();
 
                     if (cookie.startsWith(name + '=')) {
-                        return cookie.substring(name.length + 1).toUpperCase();
+                        return cookie.substring(name.length + 1);
                     }
                 }
                 return '';
