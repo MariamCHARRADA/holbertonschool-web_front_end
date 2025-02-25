@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 10 - Another Get API</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="application/javascript">
+        function addPostRow(data) {
+            var $paragraph = $("<p>").append(
+                $("<span>").text(
+                    `Post created with id ${data.id}, title: ${data.title}, author: ${data.author}`
+                )
+            );
+            $("body").append($paragraph);
+        }
+
+        function listPosts() {
+            $.ajax({
+                url: "http://localhost:3000/posts",
+                type: "GET",
+                success: function (data) {
+                    data.forEach(function (post) {
+                        addPostRow(post);
+                    });
+                },
+                error: function () {
+                    alert("Server Error");
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            listPosts();
+        });
+    </script>
+</body>
+
+</html>
