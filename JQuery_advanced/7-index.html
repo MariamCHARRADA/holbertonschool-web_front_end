@@ -27,7 +27,7 @@
                     $("<span>").text(id + " - "),
                     $("<b>").text(title)
                 ),
-                $("<p>").html(snippet) // Use .html() to render HTML tags in the snippet
+                $("<p>").html(snippet)
             );
 
             $("ul").append($li);
@@ -41,12 +41,12 @@
                     list: "search",
                     format: "json",
                     srsearch: search,
-                    origin: "*" // Required for CORS
+                    origin: "*"
                 },
                 type: "GET",
                 success: function (data) {
                     console.log(data);
-                    $("ul").empty(); // Clear previous results
+                    $("ul").empty();
                     data.query.search.forEach(function (result) {
                         addNewArticle(result.pageid, result.title, result.snippet);
                     });
